@@ -6,6 +6,7 @@
 
 body{
     background: #eaeaea;
+    overflow: hidden;
 }
 
 .container{
@@ -88,7 +89,7 @@ body{
     margin-top:10px;
     margin-bottom: 20px;
     opacity: 0;
-    animation:animate 1s ease-in-out 1 forwards;
+    animation:animate 1s ease-in-out 0.3s 1 forwards;
  }
 
 
@@ -97,7 +98,7 @@ body{
     border:none;
     cursor: pointer;
     opacity: 0;
-    animation:animate 1s ease-in-out 1 forwards;
+    animation:animate 1s ease-in-out 0.6s  1 forwards;
  }
 
     @keyframes animate{
@@ -106,7 +107,7 @@ body{
             transform: translateY(0,100px);
             filter:blur(33px);
         }
-        100%{
+        to{
             opacity: 1;
             transform: translateY(0);
             filter:blur(0);
@@ -129,6 +130,7 @@ body{
         border:none;
         margin: 0 20px;
         cursor: pointer;
-        font-size: 20px;
-        box-shadow: 0 10px 20px #505050;
+        margin: 0 5px;
+        border: 1px solid #000;
+        transition: 0.3s;
     }

@@ -2,7 +2,11 @@ let next = document.querySelector('.next');
 let prev = document.querySelector('.prev');
 
 next.addEventListener('click', function() {
-    let active = document.querySelector('.item')
+    let items = document.querySelectorAll('.item')
     document.querySelectorAll('item')
-    document.querySelector('.slide').appendChild(item[0])
+    document.querySelector('.slide').appendChild(items[0])
+});
+prev.addEventListener('click', function() {
+    let items = document.querySelectorAll('.item')
+        document.querySelector('.slide').prepend(items[items.length - 1])
 });
